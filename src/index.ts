@@ -1,17 +1,7 @@
-import express, { Request, Response } from "express";
-const app = express();
+import { Macbook, Laptop, Programmer } from "./TypedI/DependencyInjection";
 
-// Parse JSON
-app.use(express.json());
+const programmer: Programmer = new Programmer(new Laptop());
+const programmer2: Programmer = new Programmer(new Macbook());
 
-app.get("/", (req: Request, res: Response) => {
-  res.json({
-    message: "Hello, this is Node.js, Express.js and TypeScript.",
-  });
-});
-
-const port = process.env.PORT || 3000;
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+programmer.programming();
+programmer2.programming();
