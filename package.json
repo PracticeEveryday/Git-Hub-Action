@@ -6,7 +6,8 @@
   "author": "DongHyun Kim <developerforus@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "reflect-metadata": "^0.1.13"
   },
   "scripts": {
     "start": "nodemon --exec ts-node src/index.ts",
